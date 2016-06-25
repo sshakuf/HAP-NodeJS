@@ -3,7 +3,6 @@ var Service = require('../').Service;
 var Characteristic = require('../').Characteristic;
 var uuid = require('../').uuid;
 var http = require('http');
-var wait = require('wait.for'); /// npm install wait.for
 
 
 function getJson(url, path){
