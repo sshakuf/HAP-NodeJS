@@ -57,7 +57,8 @@ var FAKE_LOCK = {
     console.log('before ePort: ' + FAKE_LOCK.ePort);
 
     var tmp = FAKE_LOCK.ePort.substr(0,4) + '11' + FAKE_LOCK.ePort.substr(6)
-    getJson("10.0.0.28", '/eport/'+String(parseInt(tmp,2))+'/')
+    ePort = String(parseInt(tmp,2))
+    getJson("10.0.0.28", '/eport/'+ePort+'/')
   },
   unlock: function() { 
     console.log("Unlocking the lock!");
@@ -65,7 +66,8 @@ var FAKE_LOCK = {
     console.log('before ePort: ' + FAKE_LOCK.ePort);
 
     var tmp = FAKE_LOCK.ePort.substr(0,4) + '00' + FAKE_LOCK.ePort.substr(6)
-    getJson("10.0.0.28", '/eport/'+String(parseInt(tmp,2))+'/')
+    ePort = String(parseInt(tmp,2))
+    getJson("10.0.0.28", '/eport/'+ePort+'/')
   },
   identify: function() {
     console.log("Identify the lock!");
